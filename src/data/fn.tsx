@@ -242,7 +242,7 @@ type Input = {
   sbp: number;
   smoking: boolean;
   diabetes: boolean;
-  waist: number;
+  waist: number ;
   height: number;
 };
 
@@ -300,8 +300,8 @@ type PropsCVDRiskBox = {
   smoking?: boolean;
   diabetes?: boolean;
   totalCholesterol?: number;
-  waist?: number;
-  height?: number;
+  waist: number;
+  height: number;
 };
  
 export const CVDRiskBox = ({
