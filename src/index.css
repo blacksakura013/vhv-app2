@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   🌐 Base Style
+========================= */
+body {
+  @apply bg-blue-50 text-gray-800 antialiased;
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* =========================
+   🧩 Reusable Components
+========================= */
+
+/* Input */
+.input {
+  @apply w-full border border-gray-300 px-4 py-3 rounded-xl mb-3 
+         text-sm bg-white
+         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400
+         transition;
+}
+
+/* Button Primary */
+.btn-primary {
+  @apply w-full bg-blue-600 text-white py-3 rounded-xl 
+         font-semibold text-sm
+         hover:bg-blue-700 active:scale-[0.98]
+         transition;
+}
+
+/* Button Secondary */
+.btn-secondary {
+  @apply w-full bg-sky-400 text-white py-3 rounded-xl 
+         font-semibold text-sm
+         hover:bg-sky-500 active:scale-[0.98]
+         transition;
+}
+
+/* Card */
+.card {
+  @apply bg-white rounded-2xl shadow-sm p-4;
+}
+
+/* =========================
+   📱 Layout Helpers
+========================= */
+
+/* Container responsive */
+.container-app {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Title */
+.title {
+  @apply text-xl sm:text-2xl font-bold text-blue-600;
+}
+
+/* Subtitle */
+.subtitle {
+  @apply text-sm text-gray-500;
+}
+
+/* =========================
+   📊 Dashboard UI
+========================= */
+
+.stat-card {
+  @apply bg-white p-4 rounded-2xl shadow-sm flex flex-col gap-1;
+}
+
+.stat-number {
+  @apply text-2xl font-bold text-blue-600;
+}
+
+.stat-label {
+  @apply text-sm text-gray-500;
+}
+
+/* =========================
+   🔐 Auth Pages
+========================= */
+
+.auth-container {
+  @apply min-h-screen flex items-center justify-center bg-blue-50 px-4;
+}
+
+.auth-card {
+  @apply w-full max-w-md bg-white p-6 rounded-2xl shadow-md;
+}
+
+.auth-title {
+  @apply text-2xl font-bold text-blue-600 text-center mb-6;
+}
+
+/* =========================
+   📱 Mobile Tweaks
+========================= */
+
+/* ลด padding บนมือถือ */
+@media (max-width: 640px) {
+  .auth-card {
+    @apply p-5;
+  }
+}
+
+/* =========================
+   ✨ Scrollbar (optional)
+========================= */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5f5;
+  border-radius: 999px;
+}
+
+/* =========================
+   🚫 Remove default button styles
+========================= */
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   🧠 Utility Classes
+========================= */
+
+/* Center Flex */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+/* Gap */
+.gap-default {
+  @apply gap-4;
+}
+
+/* =========================
+   🎯 Animation
+========================= */
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
